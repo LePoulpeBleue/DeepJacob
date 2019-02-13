@@ -1,0 +1,16 @@
+{
+  "name": "Jacob",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "lowdb": "^1.0.0",
+    "ytdl-core": "^0.29.1",
+    "discord.js": "^11.4.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node bot.js"
+  }
+}
