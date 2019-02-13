@@ -268,3 +268,7 @@ bot.on('message', message => {
 });
 
 bot.login(process.env.BOT_TOKEN);
+
+function getRandomInt(max) {
+  return Math.floor(Math.random() * Math.floor(max));
+}
