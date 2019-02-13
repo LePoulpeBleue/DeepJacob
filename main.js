@@ -19,6 +19,7 @@ bot.on('ready', () => {
 
 bot.on('message', message => {
 
+  if (message.author.bot) return;
   var strmessage = message.content.toLowerCase();
   const basicLama = message.guild.emojis.find(emoji => emoji.name === "Lama_Basic");
   const blueLama = message.guild.emojis.find(emoji => emoji.name === "Lama_Blue");
