@@ -38,6 +38,17 @@ bot.on('message', message => {
         console.log(userlama);
         db.get("userStats").find({user: message.author.username}).assign({user: message.author.username, basicLama: userlama[2] += 1}).write();
     }
+    if(strmessage.startsWith(".ping")){
+      message.channel.send(({embed: {
+        color: 0x2ed32e,
+        fields: [{
+            name: "PING :",
+            value: "Le ping est de : " + Math.round(bot.ping) + ' ms.'
+      }
+     ],
+     }
+    }));
+    }
     if(strmessage.startsWith("bonjour" || "coucou" || "cc" || "slt" || "bjr" || "hello")){
       message.reply("Bonjour.");
     }
