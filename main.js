@@ -49,6 +49,51 @@ bot.on('message', message => {
      }
     }));
     }
+     if(strmessage.startsWith("pierre")){
+      var luck = Math.random(3);
+      if(luck === 0){
+        message.channel.send("Ciseau!");
+        message.channel.send("J'ai perdu ;-;");
+      }
+      if(luck === 1){
+        message.channel.send("Pierre!");
+        message.channel.send("Égalité.");
+      }
+      if(luck === 2){
+        message.channel.send("Feuille!");
+        message.channel.send("J'ai Gagné :D");
+      }
+    }
+    if(strmessage.startsWith("feuille")){
+      var luck = Math.random(3);
+      if(luck === 0){
+        message.channel.send("Ciseau!");
+        message.channel.send("J'ai Gagné :D");
+      }
+      if(luck === 1){
+        message.channel.send("Pierre!");
+        message.channel.send("J'ai perdu ;-;");
+      }
+      if(luck === 2){
+        message.channel.send("Feuille!");
+        message.channel.send("Égalité.");
+      }
+    }
+    if(strmessage.startsWith("ciseau")){
+      var luck = Math.random(3);
+      if(luck === 0){
+        message.channel.send("Ciseau!");
+        message.channel.send("Égalité.");
+      }
+      if(luck === 1){
+        message.channel.send("Pierre!");
+        message.channel.send("J'ai Gagné :D");
+      }
+      if(luck === 2){
+        message.channel.send("Feuille!");
+        message.channel.send("J'ai perdu ;-;");
+      }
+    }
     if(strmessage.startsWith("bonjour" || "coucou" || "cc" || "slt" || "bjr" || "hello")){
       message.reply("Bonjour.");
     }
