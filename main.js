@@ -49,8 +49,8 @@ bot.on('message', message => {
      }
     }));
     }
-     if(strmessage.startsWith("pierre")){
-      var luck = Math.random(3);
+    if(strmessage.startsWith("pierre")){
+      var luck = getRandomInt(3);
       if(luck === 0){
         message.channel.send("Ciseau!");
         message.channel.send("J'ai perdu ;-;");
@@ -65,7 +65,7 @@ bot.on('message', message => {
       }
     }
     if(strmessage.startsWith("feuille")){
-      var luck = Math.random(3);
+      var luck = getRandomInt(3);
       if(luck === 0){
         message.channel.send("Ciseau!");
         message.channel.send("J'ai Gagné :D");
@@ -80,7 +80,7 @@ bot.on('message', message => {
       }
     }
     if(strmessage.startsWith("ciseau")){
-      var luck = Math.random(3);
+      var luck = getRandomInt(3);
       if(luck === 0){
         message.channel.send("Ciseau!");
         message.channel.send("Égalité.");
