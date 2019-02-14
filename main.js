@@ -39,6 +39,10 @@ bot.on('message', message => {
         console.log(userlama);
         db.get("userStats").find({user: message.author.username}).assign({user: message.author.username, basicLama: userlama[2] += 1}).write();
     }
+    if(strmessage.includes("jacob")){
+      var replymessage = ["Oui.", "Non.", "Peut-être.", "Je ne sais pas."];
+      message.channel.send(replymessage[getRandomInt(3)]);
+    }
     if(strmessage.startsWith(".ping")){
       message.channel.send(({embed: {
         color: 0x2ed32e,
