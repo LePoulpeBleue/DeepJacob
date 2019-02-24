@@ -21,12 +21,69 @@ bot.on('message', message => {
 
   if (message.author.bot) return;
   var strmessage = message.content.toLowerCase();
-  const basicLama = message.guild.emojis.find(emoji => emoji.name === "Lama_Basic");
-  const blueLama = message.guild.emojis.find(emoji => emoji.name === "Lama_Blue");
-  const prisonnierLama = message.guild.emojis.find(emoji => emoji.name === "Lama_Prisonnier");
-  const fortniteLama = message.guild.emojis.find(emoji => emoji.name === "Lama_Fortnite");
-  const rainbowLama = message.guild.emojis.find(emoji => emoji.name === "Lama_Rainbow");
-  const supremeLama = message.guild.emojis.find(emoji => emoji.name === "Lama_Supreme");
+  const TimeFormul = [
+    "2 ^ 0",
+    "4 x 2 - 7",
+    "2 ^ 1",
+    "3 x 3 / 3",
+    "2 ^ 2",
+    "2 x 2 + 1",
+    "4 x 3 - 6",
+    "1 x 3 + 4",
+    "2 ^ 3",
+    "9 x 9 / 9",
+    "4 x 4 - 6",
+    "2 x 5 + 1",
+    "2 x 5 + 2",
+    "5 x 2 + 3",
+    "2 x 5 + 4",
+    "5 x 2 + 5",
+    "2 ^ 4",
+    "5 x 2 + 7",
+    "2 x 5 + 8",
+    "5 x 2 + 9",
+    "4 x 5 + 0",
+    "5 x 4 + 1",
+    "4 x 5 + 2",
+    "5 x 4 + 3",
+    "4 x 5 + 4",
+    "5 x 4 + 5",
+    "4 x 5 + 6",
+    "5 x 4 + 7",
+    "4 x 5 + 8",
+    "5 x 4 + 9",
+    "6 x 5 + 0",
+    "5 x 6 + 1",
+    "2 ^ 5",
+    "6 x 5 + 3",
+    "5 x 6 + 4",
+    "6 x 5 + 5",
+    "5 x 6 + 6",
+    "6 x 5 + 7",
+    "5 x 6 + 8",
+    "6 x 5 + 9",
+    "5 x 8 + 0",
+    "8 x 5 + 1",
+    "5 x 8 + 2",
+    "8 x 5 + 3",
+    "5 x 8 + 4",
+    "8 x 5 + 5",
+    "5 x 8 + 6",
+    "8 x 5 + 7",
+    "5 x 8 + 8",
+    "8 x 5 + 9",
+    "5 x 10 + 0",
+    "10 x 5 + 1",
+    "5 x 10 + 2",
+    "10 x 5 + 3",
+    "5 x 10 + 4",
+    "10 x 5 + 5",
+    "5 x 10 + 6",
+    "10 x 5 + 7",
+    "5 x 10 + 8",
+    "10 x 5 + 9",
+    "6 x 10 + 0"
+  ];
 
     db.get("messages").push({Autheur: message.author.username, AutheurID: message.author.id, Message: message.content, Date: new Date()}).write();
 
@@ -71,19 +128,11 @@ bot.on('message', message => {
           fields: [
               {
                   name: "Heure",
-                  value: heure + 1
+                  value: TimeFormul[heure] 
               },
               {
                   name: "Minute",
-                  value: minute
-              },
-              {
-                  name: "Seconde",
-                  value: seconde
-              },
-              {
-                name: "Milliseconde",
-                value: milliseconde
+                  value: TimeFormul[minute]
               }
           ],
           timestamp: new Date(),
@@ -235,6 +284,7 @@ bot.on('message', message => {
 
 });
 
+bot.login("NTQyNDA0ODU1MTc2ODg4MzQx.D1P-qA.khXojnb4cgfMZscOXGxv4Oc4WfA");
 bot.login(process.env.BOT_TOKEN);
 
 function getRandomInt(max) {
