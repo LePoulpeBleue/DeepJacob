@@ -135,7 +135,7 @@ bot.on('message', message => {
                   value: TimeFormul[minute]
               }
           ],
-          timestamp: new Date(),
+          timestamp: "nop",
           footer: {
               icon_url: bot.user.avatarURL,
               text: "© Jacob"
