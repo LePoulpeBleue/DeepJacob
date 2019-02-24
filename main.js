@@ -54,6 +54,47 @@ bot.on('message', message => {
      }
     }));
     }
+    if(strmessage.startsWith(".time")){
+      var temps = new Date();
+      var heure = temps.getHours();
+      var minute = temps.getMinutes();
+      var seconde = temps.getSeconds();
+      var milliseconde = temps.getMilliseconds();
+      message.channel.send({embed: {
+          color: 0,
+          author: {
+              name: bot.user.username,
+              icon_url: bot.user.avatarURL
+          },
+          title: "HEURE :",
+          description: "Il est :",
+          fields: [
+              {
+                  name: "Heure",
+                  value: heure
+              },
+              {
+                  name: "Minute",
+                  value: minute
+              },
+              {
+                  name: "Seconde",
+                  value: seconde
+              },
+              {
+                name: "Milliseconde",
+                value: milliseconde
+              }
+          ],
+          timestamp: new Date(),
+          footer: {
+              icon_url: bot.user.avatarURL,
+              text: "© Jacob"
+            }
+      }
+    })
+      console.log(heure, minute, seconde);
+    }
     if(strmessage.startsWith("pierre")){
       var luck = getRandomInt(3);
       if(luck === 0){
