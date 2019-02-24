@@ -86,16 +86,7 @@ bot.on('message', message => {
   ];
 
     db.get("messages").push({Autheur: message.author.username, AutheurID: message.author.id, Message: message.content, Date: new Date()}).write();
-
-    if(!db.get('userStats').find({user: message.author.username}).value()){
-        db.get('userStats').push({user: message.author.username, coin: 10, basicLama: 1, blueLama: 0, prisLama: 0, fortniteLama: 0, rainbowLama: 0, supremeLama: 0}).write();
-    }else{
-        var userlamadb = db.get("userStats").filter({user: message.author.username}).find('basicLama').value();
-        console.log('\x1b[32m%s\x1b[0m',userlamadb);
-        var userlama = Object.values(userlamadb)
-        console.log(userlama);
-        db.get("userStats").find({user: message.author.username}).assign({user: message.author.username, basicLama: userlama[2] += 1}).write();
-    }
+ 
     if(strmessage.includes("jacob")){
       var replymessage = ["Oui.", "Non.", "Peut-être.", "Je ne sais pas."];
       message.channel.send(replymessage[getRandomInt(3)]);
