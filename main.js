@@ -275,7 +275,6 @@ bot.on('message', message => {
 
 });
 
-bot.login("NTQyNDA0ODU1MTc2ODg4MzQx.D1P-qA.khXojnb4cgfMZscOXGxv4Oc4WfA");
 bot.login(process.env.BOT_TOKEN);
 
 function getRandomInt(max) {
