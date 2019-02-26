@@ -127,7 +127,7 @@ bot.on('message', message => {
           fields: [
               {
                   name: "Heure",
-                  value: TimeFormul[heure] 
+                  value: TimeFormul[heure + 1] 
               },
               {
                   name: "Minute",
