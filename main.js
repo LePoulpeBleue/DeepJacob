@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const bot = new Discord.Client();
 const low = require('lowdb');
 const FileSync = require('lowdb/adapters/FileSync');
-const ytdl = require('ytdl-core');
+const getJSON = require('get-json');
  
 const adapter = new FileSync('Database.json')
 const db = low(adapter)
@@ -101,6 +101,14 @@ bot.on('message', message => {
      ],
      }
     }));
+    }
+    if(strmessage.startsWith(".meme")){
+      getJSON("https://www.reddit.com/r/memes/top/.json?count=20", function(err, response){
+        console.log(err);
+        console.log(response);
+        var link = response.data.children[getRandomInt(20)].data.thumbnail;
+        message.channel.send(link);
+      });
     }
     if(strmessage.startsWith(".time")){
       var temps = new Date();
