@@ -1,18 +1,27 @@
 {
-  "name": "JacobV2",
-  "version": "1.0.0",
-  "description": "",
+
+  "name": "Jacobot",
+
+  "description": "Jacobot le sang",
+
+  "version": "0.0.8",
+
   "main": "main.js",
-  "dependencies": {
-    "discord.js": "^11.4.2",
-    "get-json": "^1.0.1",
-    "lowdb": "^1.0.0"
-  },
-  "devDependencies": {},
+
   "scripts": {
+
     "start": "node main.js"
+
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+
+  "dependencies": {
+
+    "discord.js": "11.4.2",
+
+    "get-json": "^1.0.1",
+    
+    "lowdb": "^1.0.0"
+
+  }
+
 }
